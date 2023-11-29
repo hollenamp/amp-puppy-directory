@@ -1,16 +1,5 @@
-"use client"
-import { Modal } from "@/components/modal";
-import { ScrollArea } from "@radix-ui/react-scroll-area";
-
 export default function PuppiesPage(){
     return (
-        <Modal modalIsOpen={true} className="bg-white text-zinc-800">
-            <Modal.Head />
-            <Modal.Body className='h-full'>
-                <ScrollArea>
-                    Puppy Page
-                </ScrollArea>
-            </Modal.Body>
-        </Modal>
+        <div>Puppy Page</div>
     )
 }

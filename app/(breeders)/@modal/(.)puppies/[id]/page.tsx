@@ -2,7 +2,7 @@
 import { Modal } from "@/components/modal";
 import { ScrollArea } from "@radix-ui/react-scroll-area";
 
-export default function PuppiesDialog(){
+export default function PuppiesModal(){
     return (
         <Modal modalIsOpen={true} className="bg-white text-zinc-800">
             <Modal.Head />

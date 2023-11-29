@@ -36,7 +36,8 @@ export default function Home() {
                     </>
                   </ul>
                   <div>
-                    <Link href='/signup' className='text-lime-500'>Signup</Link>
+                    <Link href='/signup' className='text-lime-500'>Signup</Link><br />
+                    <Link href='/puppies/001' className='text-lime-500'>Puppy</Link>
                   </div>
                 </Card.Body>
             </Card>

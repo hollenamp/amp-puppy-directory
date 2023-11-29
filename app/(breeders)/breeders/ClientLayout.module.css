@@ -1,0 +1,64 @@
+.mobileNav{
+  @apply fixed bottom-0 w-full z-50 overflow-hidden bg-white dark:bg-zinc-800 flex justify-between border-t border-zinc-600 border-solid;
+  &Item {
+    @apply h-12;
+    a {
+      @apply h-full;
+    }
+  }
+
+}
+
+.topNav{
+  @apply ease-in-out overflow-hidden;
+  &Item {
+    @apply flex flex-nowrap;
+  }
+}
+
+.sideNav{
+  @apply ease-in-out overflow-hidden bg-white dark:bg-zinc-800 text-purple-500;
+  &Item {
+    @apply flex flex-nowrap;
+    :global(.nav-item-icon) {
+      @apply flex-none w-12 md:w-16 text-center;
+    }
+  }
+}
+
+.nav {
+  &Item {
+    @apply flex-grow hover:bg-purple-500 transition-all ease-in-out;
+    &:global(.active) { 
+      @apply bg-purple-500 text-lime-500;
+      svg {
+        @apply fill-lime-500;
+      }
+      :hover {
+        svg {
+          @apply fill-lime-500;
+        }
+        a {
+          @apply text-lime-500;
+        }
+      }
+    }    
+    :global(.nav-item-icon) {
+      @apply flex-none w-full text-center ;
+    }
+    svg {
+      @apply fill-purple-300;
+    }
+    a {
+      @apply text-purple-500 dark:text-purple-300 text-center;
+    }
+    &:hover {
+      svg {
+        @apply fill-lime-500;
+      }
+      a {
+        @apply text-lime-500;
+      }
+    }
+  }
+}

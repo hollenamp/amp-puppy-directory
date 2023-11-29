@@ -1,0 +1,61 @@
+.card {
+  @apply border border-solid relative;
+
+  /* *** Radius *** */
+  &-radius {
+    &-none { 
+      @apply rounded-none;
+    }
+    &-sm { 
+      @apply rounded-sm;
+    }
+    &-md { 
+      @apply rounded-md;
+    }
+    &-lg { 
+      @apply rounded-lg;
+    }
+    &-xl { 
+      @apply rounded-xl;
+    }
+    &-2xl { 
+      @apply rounded-2xl;
+    }
+    &-full {
+      @apply rounded-full;
+    }
+  }  
+
+  /* *** Colors *** */
+  &-white {
+    @apply bg-white dark:bg-zinc-800 border-zinc-200 dark:border-zinc-900 text-zinc-700 dark:text-white;
+  }
+  
+  &-gray {
+    @apply bg-zinc-200 dark:bg-zinc-900 border-zinc-200 dark:border-black text-zinc-800 dark:text-zinc-100;
+  }
+  &-success {
+    @apply bg-lime-300 dark:bg-lime-200 border-lime-400 dark:border-lime-600;
+  }
+  &-error {
+    @apply bg-red-300 dark:bg-red-500 border-red-400 dark:border-red-600 dark:text-white;
+  }
+
+  /* *** Sections *** */
+  &-head {
+    @apply px-4 pt-4 pb-2 md:px-8 md:pt-8 md:pb-4 w-full;
+  }
+  &-body {
+    @apply px-4 p-2 md:p-4 lg:p-6 w-full;
+  }
+  &-foot {
+    @apply px-4 pt-2 pb-4 md:px-8 md:pt-4 md:pb-8 w-full;
+  }
+} 
+
+a .card { 
+  /* *** Colors *** */
+  &-white {
+    @apply bg-white dark:bg-zinc-800 border-zinc-200 dark:border-zinc-900 hover:dark:bg-zinc-900;
+  }
+}

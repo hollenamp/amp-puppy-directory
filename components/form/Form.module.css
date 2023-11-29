@@ -1,0 +1,39 @@
+.form{
+    &Input { 
+        input {
+            @apply autofill:text-zinc-100 h-full w-full text-base p-0 m-0 focus:p-0 border-none shadow-none focus:border-none outline-none focus:outline-none ring-0 focus:ring-0 transition-all bg-transparent ;
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus, 
+        input:-webkit-autofill:active  {
+            transition: background-color 5000s;
+            -webkit-text-fill-color: #828282 !important;
+        }
+        @apply px-2 border-none relative h-9 md:h-12 overflow-hidden flex flex-nowrap w-full rounded-md bg-zinc-100 border-zinc-200 dark:bg-zinc-900 dark:border-zinc-200 text-zinc-800 dark:text-zinc-300;
+    }
+    
+    &Label { 
+        @apply absolute px-2 pt-1 left-0 w-full text-sm transition-all text-left text-zinc-700 dark:text-zinc-300;
+    }
+}
+
+.editorContainer{
+    position: relative;
+    &Input{
+        position: relative;
+        @apply bg-zinc-900 rounded-lg p-2;
+    }
+    &Placeholder {
+        overflow: hidden;
+        position: absolute;
+        text-overflow: ellipsis;
+        top: 0px;
+        left: 0px;
+        user-select: none;
+        display: inline-block;
+        pointer-events: none;
+        @apply text-zinc-700 dark:text-zinc-400 p-2;
+    }
+}

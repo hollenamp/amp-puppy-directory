@@ -1,0 +1,33 @@
+.icon {
+    &-primary {
+        @apply fill-zinc-500 dark:fill-purple-500;
+    }
+
+    &-secondary {
+        @apply fill-zinc-200 dark:fill-zinc-900;
+    }
+
+    &-light {
+        @apply fill-zinc-200 dark:fill-zinc-500;
+    }
+
+    &-lime {
+        @apply fill-lime-500 dark:fill-lime-500;
+    } 
+
+    &-light-gray {
+        @apply fill-zinc-200 dark:fill-zinc-600;
+    }
+
+    &-white {
+        @apply fill-white;
+    } 
+
+    &-dark-gray {
+        @apply fill-zinc-800 dark:fill-zinc-900;
+    }
+
+    &-blue {
+        @apply fill-blue-700 dark:fill-blue-500;
+    }
+}

@@ -1,0 +1,9 @@
+.dialog {
+    &-content {
+      @apply px-8 pb-8;
+    }
+
+    &-container {
+      @apply overflow-y-auto;
+    }
+  } 

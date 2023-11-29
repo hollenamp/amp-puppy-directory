@@ -16,12 +16,31 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-bevan);
 }
+
+.active {
+  .ham {
+    @apply rotate-45;
+  }
+} 
+.line {
+  fill:none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke-width:5.5;
+  stroke-linecap:round; 
+}
+.ham .top {
+  stroke-dasharray: 40 139;
+}
+.ham .bottom {
+  stroke-dasharray: 40 180;
+}
+.active .ham .top {
+  stroke-dashoffset: -98px;
+}
+.active .ham .bottom {
+  stroke-dashoffset: -138px;
+}  

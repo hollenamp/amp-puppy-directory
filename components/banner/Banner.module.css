@@ -1,0 +1,8 @@
+.banner {
+    &Title {
+        @apply text-lg;
+    }
+    &Content {
+        @apply text-base;
+    }
+}

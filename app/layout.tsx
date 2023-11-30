@@ -1,5 +1,8 @@
+
+import { ScrollToTop } from '@/components/ScrollTo';
 import './globals.css'
 import { Bevan, Poppins } from 'next/font/google'
+import { ArrowUpToLine } from 'lucide-react';
 
 const bevan = Bevan({
   weight: '400',
@@ -23,7 +26,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${bevan.variable}`}>
       <body className={poppins.className}>
+        <div id='topOfPage' className='absolute -top-96' tabIndex={1} />
         {children}
+        <ScrollToTop href="#topOfPage">
+          <ArrowUpToLine />
+        </ScrollToTop>
       </body>
     </html>
   )

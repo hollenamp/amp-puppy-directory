@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import Header from './header';
+import Footer from './footer';
 
 export const metadata: Metadata = {
   title: 'AMP Puppies',
@@ -10,9 +12,11 @@ export default function RootLayout(props:{
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <>
+      <Header />
       {props.modal}
       {props.children}
-    </div>
+      <Footer />
+    </>
   )
 }

@@ -36,13 +36,4 @@ export default async function middleware(req: NextRequest) {
   if ( hostname !== process.env.NEXT_PUBLIC_ROOT_DOMAIN && req.nextUrl.pathname === '/' && slug) {
     return NextResponse.rewrite(new URL(`/breeder/${slug}`, req.url));
   }
-
-  // Change root to home for layout purposes
-  // if (req.nextUrl.pathname === '/') {
-  //   return NextResponse.rewrite(new URL('/home', req.url))
-  // }
-
-  // if (req.nextUrl.pathname.startsWith('/home')) {
-  //   return NextResponse.redirect(new URL('/', req.url))
-  // }
 }

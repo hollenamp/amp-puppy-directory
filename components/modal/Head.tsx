@@ -1,6 +1,7 @@
 import { Card } from "../card";
 import classNames from "classnames";
 import { useRouter } from "next/navigation";
+import { Button } from "../button";
 
 export const Head = ({
     children,
@@ -38,8 +39,8 @@ export const Head = ({
             className
         )}>
             <div className="flex justify-between items-center -my-2">
-                <div className='h-8 w-8 md:w-1/4 flex-none py-3 flex items-center gap-2 cursor-pointer'>
-                    <button onClick={handleBackButton} id="modalBackButton" className=" rounded-md" />
+                <div className='h-8 w-8 md:w-1/4 flex-none py-3 flex items-center'>
+                    <Button onClick={handleBackButton} tabIndex='-1' label={false} size='xs' color='primary' iconLeft='angleLeft' id="modalBackButton" />
                 </div>
                 <div className='flex-grow text-center dialog-handle py-2 cursor-grab'>
                     <div className='w-full pb-0.5'><hr className='w-24 mx-auto border border-zinc-400 dark:border-zinc-400' /></div>

@@ -42,6 +42,10 @@
     @apply bg-violet-600  text-white border-violet-600;
   }
 
+  &-amber {
+    @apply bg-amber-400  text-white border-amber-400;
+  }
+
   &-error {
     @apply bg-red-500 dark:bg-red-800 text-white dark:text-white border-red-900 dark:border-red-900;
   }
@@ -51,7 +55,7 @@
   }
 
   &-light {
-    @apply bg-zinc-200 dark:bg-zinc-500 text-zinc-500 dark:text-zinc-800 border-zinc-200 dark:border-zinc-700;
+    @apply bg-zinc-200 text-zinc-500 border-zinc-200;
   }
 
   &-lime {

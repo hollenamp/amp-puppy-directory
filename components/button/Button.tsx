@@ -70,16 +70,18 @@ export const Button = ({
     return ( 
         <button 
             id={id}
+            onClick={onClick}
+            disabled={disabled}
+            type={type}
             className={classNames(
                 wFull,
                 Styles.btn,
                 Styles[btnColor],
                 Styles[btnSize],
-                className,
-                onClick,
-                disabled,
-                type,
+                className
+
             )}
+
         >
             <IconLeft iconLeft={iconLeft} iconColor={iconColor} />{label && <span>{label}</span>}<IconRight iconRight={iconRight} iconColor={iconColor} />
         </button>

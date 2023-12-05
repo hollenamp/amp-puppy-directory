@@ -47,6 +47,9 @@
 
   &-amber {
     @apply bg-amber-400  text-white border-amber-400;
+    svg {
+      @apply fill-white;
+    }
   }
 
   &-error {

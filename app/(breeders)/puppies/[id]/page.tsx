@@ -8,14 +8,25 @@ export default function PuppiesPage(){
     return (
         <div className="bg-white text-zinc-500">
             <section className="w-full pt-32 bg-zinc-700 flex">
-                <div className="py-4 px-8">
-                    <div><ButtonLink href="/#puppies" label='Back to Puppies' color='amber' className="m-auto" /></div>
-                    <div></div>
+                <div className="py-4 px-8 flex justify-between w-full">
+                    <div><ButtonLink iconLeft="angleLeft"  href="/#puppies" label='Back to Puppies' color='amber' className="m-auto" /></div>
+                    <div className="flex justify-end space-x-4 items-center">
+                        <div className="text-white">
+                            <p>Check Availability</p>
+                        </div>
+                        <div>
+                            <ButtonLink href="tel:555-555-5555" label='Call (555) 555-5555' color='light' className="m-auto" />
+                        </div>
+                        <div>
+                            <ButtonLink href="/contact" label='Send Message' color='amber' className="m-auto" />
+                        </div>
+                    </div>
                 </div>
             </section>
-            <section className="w-full py-8 sm:py-16 lg:py-32 px-4 sm:px-8 lg:px-16 relative">
+            <section className="w-full p-4 sm:p-8 lg:p-16 relative">
                 <div className="mx-auto container">
                     <div className="space-y-8">
+                        
                         <div className="flex space-x-8">
                             <div className="w-1/3">
                                 <AspectRatio ratio={1 / 1} className="bg-muted">
@@ -25,16 +36,6 @@ export default function PuppiesPage(){
                                         fill
                                         />
                                 </AspectRatio>
-                                <div className="pt-4 text-center space-y-2">
-                                    <div>
-                                        <p>Call today for availability</p>
-                                        <ButtonLink href="tel:555-555-5555" label='(555) 555-5555' color='light' className="m-auto" />
-                                    </div>
-                                    <div>
-                                        <p>- or -</p>
-                                    </div>
-                                    <ButtonLink href="/contact" label='Send Message' color='amber' className="m-auto" />
-                                </div>
                             </div>
                             <div className="w-2/3">
                                 <h2 className="text-3xl">Cloud</h2>
@@ -60,6 +61,9 @@ export default function PuppiesPage(){
                                             suscipit. Fusce interdum risus et maximus lacinia. Vivamus vitae risus libero. In sit amet dui purus. Nulla sed 
                                             commodo metus, quis rutrum nibh.</p>
                                         </div>
+                                    </div>
+                                    <div>
+                                        
                                     </div>
                                 </div>
                             </div>

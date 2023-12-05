@@ -2,9 +2,10 @@
 import { Modal } from "@/components/modal";
 import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { AspectRatio } from "@radix-ui/themes";
-import { ButtonLink } from "@/components/button";
+import { Button, ButtonLink } from "@/components/button";
 import Image from "next/image";
 import Link from "next/link";
+import { Card } from "@/components/card";
 
 export default function PuppiesModal(){
     return (
@@ -58,12 +59,17 @@ export default function PuppiesModal(){
                                             commodo metus, quis rutrum nibh.</p>
                                         </div>
                                     </div>
+                                    <div>
+                                        <Button onClick={() => location.reload()} label='View Full Profile' full color='amber' className="m-auto" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-zinc-100 py-8 px-4">
-
-                        </div>
+                        <Card radius="md" color='lightGray'>
+                            <Card.Body>
+                                Some share content.
+                            </Card.Body>
+                        </Card>
                     </div>
                 </ScrollArea>
             </Modal.Body>

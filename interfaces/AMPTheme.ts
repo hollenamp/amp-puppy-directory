@@ -54,6 +54,7 @@ export interface AMPThemeColors extends AMPThemeStates, AMPThemeTypes {
     lime:string;
     white:string;
     blue:string;
+    lightGray: string;
 }
 
 export interface AMPThemeSizes {

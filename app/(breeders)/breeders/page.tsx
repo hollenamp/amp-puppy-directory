@@ -31,28 +31,28 @@ export default function BreederPage({
           </div>
         </div>
         
-            <h1 className="text-4xl font-thin tracking-tight text-white sm:text-6xl">
-            Quality Puppies
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-white">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-            fugiat veniam occaecat fugiat aliqua.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Link 
-                  href="#puppies"
-                  scroll={false}
-                  className="rounded-md bg-violet-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-violet-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600"
-                  onClick={handleScroll}
-              >
-                  See Available Puppies
-              </Link>
-              <a href="/#contact"
-                  className="rounded-md bg-zinc-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-zinc-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-600"
-              >
-                  Contact Us
-              </a>
-            </div>
+        <h1 className="text-4xl font-thin tracking-tight text-white sm:text-6xl">
+        Quality Puppies
+        </h1>
+        <p className="mt-6 text-lg leading-8 text-white">
+        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
+        fugiat veniam occaecat fugiat aliqua.
+        </p>
+        <div className="mt-10 flex items-center justify-center gap-x-6">
+          <Link 
+              href="#puppies"
+              scroll={false}
+              className="rounded-md bg-violet-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-violet-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600"
+              onClick={handleScroll}
+          >
+              See Available Puppies
+          </Link>
+          <a href="/#contact"
+              className="rounded-md bg-zinc-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-zinc-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-600"
+          >
+              Contact Us
+          </a>
+        </div>
       </Banner>
       <section className="w-full py-8 sm:py-16 lg:py-32 px-4 sm:px-8 lg:px-16 relative bg-zinc-200">
         <div className="mx-auto container">

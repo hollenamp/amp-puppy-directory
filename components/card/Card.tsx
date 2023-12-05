@@ -25,7 +25,7 @@ export const Card = ({
   style,
 }:Props) => {
   const radiusSize = `card-radius-${radius}`;
-  const cardColor = `card-${color}`; 
+  const cardColor = `card-${color ? color: 'LightGray'}`; 
   return (
     <div className={classNames(
       Styles.card,

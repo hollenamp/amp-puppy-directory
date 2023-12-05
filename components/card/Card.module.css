@@ -34,6 +34,9 @@
   &-gray {
     @apply bg-zinc-200 dark:bg-zinc-900 border-zinc-200 dark:border-black text-zinc-800 dark:text-zinc-100;
   }
+  &-lightGray {
+    @apply bg-zinc-50 border-zinc-100 text-zinc-800;
+  }
   &-success {
     @apply bg-lime-300 dark:bg-lime-200 border-lime-400 dark:border-lime-600;
   }

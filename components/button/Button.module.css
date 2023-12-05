@@ -36,6 +36,9 @@
   /* Button Color States */
   &-primary, &ColorPrimary {
     @apply bg-violet-600  text-white border-violet-600;
+    svg {
+      @apply fill-white;
+    }
   }
 
   &-secondary {

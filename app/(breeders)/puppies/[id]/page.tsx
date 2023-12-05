@@ -8,8 +8,8 @@ export default function PuppiesPage(){
     return (
         <div className="bg-white text-zinc-500">
             <section className="w-full pt-32 bg-zinc-700 flex">
-                <div>
-                    <div><ButtonLink href="/contact" label='Send Message' color='amber' className="m-auto" /></div>
+                <div className="py-4 px-8">
+                    <div><ButtonLink href="/#puppies" label='Back to Puppies' color='amber' className="m-auto" /></div>
                     <div></div>
                 </div>
             </section>

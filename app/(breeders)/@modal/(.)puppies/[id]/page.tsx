@@ -8,6 +8,9 @@ import Link from "next/link";
 import { Card } from "@/components/card";
 
 export default function PuppiesModal(){
+    const handleReload = () => {
+        location.href = location.href
+    };
     return (
         <Modal modalIsOpen={true} className="bg-white text-zinc-800">
             <Modal.Head />
@@ -60,7 +63,7 @@ export default function PuppiesModal(){
                                         </div>
                                     </div>
                                     <div>
-                                        <Button onClick={() => location.reload()} label='View Full Profile' full color='amber' className="m-auto" />
+                                        <Button onClick={handleReload} label='View Full Profile' full color='amber' className="m-auto" />
                                     </div>
                                 </div>
                             </div>

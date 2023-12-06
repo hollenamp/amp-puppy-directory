@@ -3,6 +3,7 @@ import { Button, ButtonLink } from "@/components/button";
 import Image from "next/image";
 import Link from "next/link";
 import { Card } from "@/components/card";
+import { ArrowRightCircle, Eye } from "lucide-react";
 
 export default function PuppiesPage(){
     return (
@@ -29,23 +30,57 @@ export default function PuppiesPage(){
                         
                         <div className="flex space-x-8">
                             <div className="w-1/3">
-                                <AspectRatio ratio={1 / 1} className="bg-muted">
-                                    <Image className="object-cover"
-                                        src={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/images/samoyed-01.jpg`}
-                                        alt="Puppy Photo"
-                                        fill
-                                        />
-                                </AspectRatio>
+                                <div className="grid grid-cols-4 gap-2">
+                                    <div className="col-span-4">
+                                        <AspectRatio ratio={3 / 2} className="bg-muted">
+                                            <Image className="object-cover rounded-md"
+                                                src={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/images/samoyed-01.jpg`}
+                                                alt="Puppy Photo"
+                                                fill
+                                                />
+                                        </AspectRatio>
+                                    </div>
+                                    <div className="col-span-2 relative">
+                                        <Image className="object-cover rounded-md"
+                                            src={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/images/samoyed-01.jpg`}
+                                            alt="Puppy Photo"
+                                            fill
+                                            />
+                                    </div>
+
+                                    <div>
+                                        <AspectRatio ratio={1 / 1} className="bg-muted">
+                                            <Image className="object-cover rounded-md"
+                                                src={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/images/samoyed-01.jpg`}
+                                                alt="Puppy Photo"
+                                                fill
+                                                />
+                                        </AspectRatio>
+                                    </div>
+
+                                    <div className="relative overflow-hidden rounded-md">
+                                        <div className=" absolute inset-0 bg-white/40 w-full h-full z-10 flex justify-center items-center">
+                                            <div><ArrowRightCircle size={48} color="#fff" /></div>
+                                        </div>
+                                        <AspectRatio ratio={1 / 1} className="bg-muted blur-sm">
+                                            <Image className="object-cover"
+                                                src={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/images/samoyed-01.jpg`}
+                                                alt="Puppy Photo"
+                                                fill
+                                                />
+                                        </AspectRatio>
+                                    </div>
+                                </div>
                             </div>
                             <div className="w-2/3">
-                                <h2 className="text-3xl">Cloud</h2>
+                                <h2 className="text-3xl text-amber-400">Cloud</h2>
                                 <div className="space-y-8">
                                     <div className="flex space-x-8">
                                         <div className="w-3/4">
                                             <strong>Female</strong>, <strong><Link href='/' className="text-violet-500">Samoyed</Link></strong> Puppy<br />
                                             Born <strong>Aug 26, 2023</strong> - <strong>10</strong> weeks old
                                         </div>
-                                        <div className="flex-grow flex align-middle items-center bg-zinc-100 justify-center">
+                                        <div className="flex-grow flex align-middle items-center bg-amber-300 text-white justify-center rounded-sm">
                                             <div className="text-center w-full py-4 px-8">
                                                 <strong className="text-2xl">$2,000</strong> 
                                             </div>
@@ -53,7 +88,7 @@ export default function PuppiesPage(){
                                     </div>
                                     <hr />
                                     <div>
-                                        <h3 className="text-lg font-normal">About Cloud</h3>
+                                        <h3 className="text-lg font-normal text-amber-400">About Cloud</h3>
                                         <div className="text-sm">
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut tincidunt libero, id dignissim tellus. 
                                             Suspendisse consequat mollis ligula, at maximus orci volutpat et. Nulla id est metus. Donec eget fringilla lacus. 

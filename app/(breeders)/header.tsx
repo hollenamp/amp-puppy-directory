@@ -3,10 +3,9 @@ import { useEffect, useState, Ref } from 'react'
 import ApplicationLogo from "@/components/ApplicationLogo"
 import Link from "next/link"
 import classNames from 'classnames'
-// import * as NavigationMenu from '@radix-ui/react-navigation-menu'
-import { ChevronDown } from 'lucide-react'
 import { Sticky } from '@/components/sticky'
 import { Nav } from '@/components/navigation'
+import { usePathname } from 'next/navigation'
 
 export default function Header(){
     const [isOpen, setIsOpen] = useState(false)
@@ -14,6 +13,8 @@ export default function Header(){
     const handleMouseEnter = (e:any) => {
         setViewportOffset(e.currentTarget.offsetLeft)
     };
+    
+    const pathname = usePathname()
 
     useEffect(() => {
         const bodyElement = document.body;
@@ -44,7 +45,7 @@ export default function Header(){
 
     return(
         <>
-            <header className="absolute z-50 w-full top-0 left-0 right-0">
+            <header className={`${pathname == '/' && 'absolute z-50 top-0 left-0 right-0 '}w-full`}>
                 <div className="flex bg-violet-500 text-white py-4 px-8">
                     <div className="flex-grow">Facebook | Twitter</div>
                     <div>Call: (555) 555-5555</div>
@@ -55,7 +56,7 @@ export default function Header(){
                     <Sticky 
                         stickyClass={{
                             on :'text-zinc-800 bg-white/40', 
-                            off:'text-white bg-white/5'
+                            off:`${pathname == '/' ? 'text-white': 'text-zinc-800'} bg-white/5`
                         }}>
                         <div className='flex flex-col w-full h-full backdrop-blur-sm transition-all duration-500'>
                             <div className="w-full px-8 flex justify-between items-center">

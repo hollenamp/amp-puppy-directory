@@ -6,14 +6,20 @@ import Link from "next/link";
 import { Card } from "@/components/card";
 import { Plus } from "lucide-react";
 import { Lightbox } from "@/components/lightbox";
+import { useState } from "react";
 
 
 export default function PuppiesPage(){
-    const handleModal = () => {
+
+    let [lightboxIsOpen, setLightboxIsOpen] = useState(false)
+
+    const openLightbox = (id?:number) => {
+        console.log(lightboxIsOpen)
+        setLightboxIsOpen(true)
     };
     return (
         <>
-            <Lightbox />
+            <Lightbox lightboxIsOpen={lightboxIsOpen} setLightboxIsOpen={setLightboxIsOpen} />
             <main className="bg-white text-zinc-500">
                 <section className="w-full py-4 px-4 sm:px-8 lg:px-16 border-t-2 border-b border-zinc-100 bg-zinc-50">
                     <div className="mx-auto container flex justify-between">
@@ -37,7 +43,7 @@ export default function PuppiesPage(){
                             <div className="flex space-x-8">
                                 <div className="w-1/3">
                                     <div className="grid grid-cols-4 gap-2">
-                                        <div className="col-span-4">
+                                        <div className="col-span-4 cursor-pointer" onClick={() => openLightbox(1)}>
                                             <AspectRatio ratio={3 / 2} className="bg-muted">
                                                 <Image className="object-cover rounded-md"
                                                     src={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/images/samoyed-01.jpg`}

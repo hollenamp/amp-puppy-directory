@@ -12,14 +12,78 @@ import { useState } from "react";
 export default function PuppiesPage(){
 
     let [lightboxIsOpen, setLightboxIsOpen] = useState(false)
+    let [selectedMedia, setSelectedMedia] = useState(0)
 
     const openLightbox = (id?:number) => {
-        console.log(lightboxIsOpen)
+        const selectedID = (id)? id:0;
+        setSelectedMedia(selectedID)
         setLightboxIsOpen(true)
     };
+
+    const mediaImages = [
+        {src:`${process.env.NEXT_PUBLIC_FRONTEND_URL}/images/samoyed-01.jpg`},
+        {src:`${process.env.NEXT_PUBLIC_FRONTEND_URL}/images/samoyed-02.jpg`},
+        {src:`${process.env.NEXT_PUBLIC_FRONTEND_URL}/images/samoyed-03.jpg`},
+        {src:`${process.env.NEXT_PUBLIC_FRONTEND_URL}/images/samoyed-04.jpg`},
+        {src:`${process.env.NEXT_PUBLIC_FRONTEND_URL}/images/samoyed-05.jpg`},
+        {src:`${process.env.NEXT_PUBLIC_FRONTEND_URL}/images/samoyed-06.jpg`}
+    ]
+
+    const MediaImages = () => {
+        return mediaImages.slice(0, 4).map((media, index)=>{
+            switch(index){
+                case 0: return(
+                    <div className="col-span-4 cursor-pointer" onClick={() => openLightbox(index)}>
+                        <AspectRatio ratio={3 / 2} className="bg-muted">
+                            <Image className="object-cover rounded-md"
+                                src={media.src}
+                                alt="Puppy Photo"
+                                fill
+                                />
+                        </AspectRatio>
+                    </div>
+                )
+                case 1: return(
+                    <div className="col-span-2 relative" onClick={() => openLightbox(index)}>
+                        <Image className="object-cover rounded-md"
+                            src={media.src}
+                            alt="Puppy Photo"
+                            fill
+                            />
+                    </div>
+                )
+                case 2: return(
+                    <div onClick={() => openLightbox(index)}>
+                        <AspectRatio ratio={1 / 1} className="bg-muted">
+                            <Image className="object-cover rounded-md"
+                                src={media.src}
+                                alt="Puppy Photo"
+                                fill
+                                />
+                        </AspectRatio>
+                    </div>
+                )
+                case 3: return(
+                    <div className="relative overflow-hidden rounded-md" onClick={() => openLightbox(0)}>
+                        <div className="absolute inset-0 bg-zinc-600/40 w-full h-full z-10 flex justify-center items-center cursor-pointer" >
+                            <div className="flex flex-nowrap items-center"><Plus size={32} color="#fff" /><span className="text-4xl text-white">10</span></div>
+                        </div>
+                        <AspectRatio ratio={1 / 1} className="bg-muted blur-sm">
+                            <Image className="object-cover"
+                                src={media.src}
+                                alt="Puppy Photo"
+                                fill
+                                />
+                        </AspectRatio>
+                    </div>
+                )
+            }
+        })
+    }
+
     return (
         <>
-            <Lightbox lightboxIsOpen={lightboxIsOpen} setLightboxIsOpen={setLightboxIsOpen} />
+            <Lightbox lightboxIsOpen={lightboxIsOpen} setLightboxIsOpen={setLightboxIsOpen} media={mediaImages} selectedMedia={selectedMedia} />
             <main className="bg-white text-zinc-500">
                 <section className="w-full py-4 px-4 sm:px-8 lg:px-16 border-t-2 border-b border-zinc-100 bg-zinc-50">
                     <div className="mx-auto container flex justify-between">
@@ -43,45 +107,7 @@ export default function PuppiesPage(){
                             <div className="flex space-x-8">
                                 <div className="w-1/3">
                                     <div className="grid grid-cols-4 gap-2">
-                                        <div className="col-span-4 cursor-pointer" onClick={() => openLightbox(1)}>
-                                            <AspectRatio ratio={3 / 2} className="bg-muted">
-                                                <Image className="object-cover rounded-md"
-                                                    src={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/images/samoyed-01.jpg`}
-                                                    alt="Puppy Photo"
-                                                    fill
-                                                    />
-                                            </AspectRatio>
-                                        </div>
-                                        <div className="col-span-2 relative">
-                                            <Image className="object-cover rounded-md"
-                                                src={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/images/samoyed-01.jpg`}
-                                                alt="Puppy Photo"
-                                                fill
-                                                />
-                                        </div>
-
-                                        <div>
-                                            <AspectRatio ratio={1 / 1} className="bg-muted">
-                                                <Image className="object-cover rounded-md"
-                                                    src={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/images/samoyed-01.jpg`}
-                                                    alt="Puppy Photo"
-                                                    fill
-                                                    />
-                                            </AspectRatio>
-                                        </div>
-
-                                        <div className="relative overflow-hidden rounded-md">
-                                            <div className="absolute inset-0 bg-zinc-600/40 w-full h-full z-10 flex justify-center items-center cursor-pointer" >
-                                                <div className="flex flex-nowrap items-center"><Plus size={32} color="#fff" /><span className="text-4xl text-white">10</span></div>
-                                            </div>
-                                            <AspectRatio ratio={1 / 1} className="bg-muted blur-sm">
-                                                <Image className="object-cover"
-                                                    src={`${process.env.NEXT_PUBLIC_FRONTEND_URL}/images/samoyed-01.jpg`}
-                                                    alt="Puppy Photo"
-                                                    fill
-                                                    />
-                                            </AspectRatio>
-                                        </div>
+                                        <MediaImages />
                                     </div>
                                 </div>
                                 <div className="w-2/3">

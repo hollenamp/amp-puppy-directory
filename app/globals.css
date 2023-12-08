@@ -44,3 +44,12 @@ h1, h2, h3, h4, h5, h6 {
 .active .ham .bottom {
   stroke-dashoffset: -138px;
 }  
+
+.fade{
+  &-in{
+    @apply opacity-100 ease-in transition-opacity delay-150 duration-1000;
+  }
+  &-out{
+    @apply opacity-0 ease-out transition-opacity delay-150 duration-1000;
+  }
+}

@@ -90,8 +90,12 @@ export const Lightbox = ({
 
                 <Dialog.Panel className="fixed inset-0 w-screen h-screen flex justify-center">
                     <div className='fixed top-2 right-2 rounded-full cursor-pointer overflow-hidden z-50' onClick={closeLightbox}><XCircle size={48} strokeWidth={2.25} color='#fff' /></div>
-                    <div className='fixed top-[50%] left-2 rounded-full cursor-pointer overflow-hidden z-50' onClick={prevMedia}><ChevronLeftCircle size={48} strokeWidth={2.25} color='#fff' /></div>
-                    <div className='fixed top-[50%] right-2 rounded-full cursor-pointer overflow-hidden z-50' onClick={nextMedia}><ChevronRightCircle size={48} strokeWidth={2.25} color='#fff' /></div>
+                    {selectedLightboxMedia !== 0 &&
+                        <div className='fixed top-[50%] left-2 rounded-full cursor-pointer overflow-hidden z-50' onClick={prevMedia}><ChevronLeftCircle size={48} strokeWidth={2.25} color='#fff' /></div>
+                    }
+                    {selectedLightboxMedia !== (media.length - 1) && 
+                        <div className='fixed top-[50%] right-2 rounded-full cursor-pointer overflow-hidden z-50' onClick={nextMedia}><ChevronRightCircle size={48} strokeWidth={2.25} color='#fff' /></div>
+                    }
                     <div className="flex flex-nowrap w-screen h-full items-center justify-center overflow-hidden">
                         <div className="relative rounded-md mx-auto px-8 py-8 max-h-full max-w-full w-screen flex justify-center">
                             <MediaImages />

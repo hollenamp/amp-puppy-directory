@@ -29,7 +29,7 @@ export default function SectionPuppies({
             date: 'Mar 16, 2020',
             datetime: '2020-03-16',
             category: { title: 'Samoyed', href: '#' },
-            featuredImage: {src:'images/samoyed-01.jpg', width:2000, height:667}
+            featuredImage: {src:'images/samoyed-02.jpg', width:2000, height:667}
         },
         {
             id: 3,
@@ -40,7 +40,7 @@ export default function SectionPuppies({
             date: 'Mar 16, 2020',
             datetime: '2020-03-16',
             category: { title: 'Samoyed', href: '#' },
-            featuredImage: {src:'images/samoyed-01.jpg', width:2000, height:667}
+            featuredImage: {src:'images/samoyed-03.jpg', width:2000, height:667}
         },
         {
             id: 4,
@@ -51,7 +51,7 @@ export default function SectionPuppies({
             date: 'Mar 16, 2020',
             datetime: '2020-03-16',
             category: { title: 'Samoyed', href: '#' },
-            featuredImage: {src:'images/samoyed-01.jpg', width:2000, height:667}
+            featuredImage: {src:'images/samoyed-04.jpg', width:2000, height:667}
         }
     ]
 
